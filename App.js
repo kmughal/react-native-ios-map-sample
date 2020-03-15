@@ -35,7 +35,7 @@ const App = () => {
 
   const searchStopPoint = e => {
     setSearchingPosition(true)
-    const url = `https://api-tigris.tfl.gov.uk/StopPoint/search/${search}?modes=bus,tube,national-rail,dlr,overground,tflrail,river-bus,tram,cable-car,coach&maxResults=25&faresOnly=false&includeHubs=true&tflOperatedNationalRailStationsOnly=false&app_id=8268063a&app_key=14f7f5ff5d64df2e88701cef2049c804`
+    const url = `https://api.tfl.gov.uk/StopPoint/search/${search}?modes=bus,tube,national-rail,dlr,overground,tflrail,river-bus,tram,cable-car,coach&maxResults=25&faresOnly=false&includeHubs=true&tflOperatedNationalRailStationsOnly=false&app_id=8268063a&app_key=14f7f5ff5d64df2e88701cef2049c804`
     fetch(url)
       .then(result => result.json())
       .then(data => {
